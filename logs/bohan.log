@@ -1,0 +1,60 @@
+2021-01-21 08:43:28.773  INFO 52259 --- [restartedMain] com.bohan.MegrezAcademyApplication       : Starting MegrezAcademyApplication on Bohans-Mac-mini.local with PID 52259 (/Users/bohanxiao/Desktop/megrez-academy/target/classes started by bohanxiao in /Users/bohanxiao/Desktop/megrez-academy)
+2021-01-21 08:43:28.779  INFO 52259 --- [restartedMain] com.bohan.MegrezAcademyApplication       : No active profile set, falling back to default profiles: default
+2021-01-21 08:43:28.808  INFO 52259 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-21 08:43:28.808  INFO 52259 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-21 08:43:29.340  INFO 52259 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-21 08:43:29.342  INFO 52259 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-21 08:43:29.357  INFO 52259 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+2021-01-21 08:43:29.505  INFO 52259 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$794b0f73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-21 08:43:29.636  INFO 52259 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-01-21 08:43:29.650  INFO 52259 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-21 08:43:29.650  INFO 52259 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-01-21 08:43:29.686  INFO 52259 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-21 08:43:29.686  INFO 52259 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 878 ms
+2021-01-21 08:43:29.732  INFO 52259 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-01-21 08:43:33.284  INFO 52259 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-01-21 08:43:33.667  INFO 52259 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-01-21 08:43:33.769  INFO 52259 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-21 08:43:33.800  INFO 52259 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-21 08:43:33.847  INFO 52259 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-01-21 08:43:33.981  INFO 52259 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-01-21 08:43:33.989  INFO 52259 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-01-21 08:43:34.032  INFO 52259 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-01-21 08:43:34.148  INFO 52259 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllUsingGET_1
+2021-01-21 08:43:34.176  INFO 52259 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-01-21 08:43:34.178  INFO 52259 --- [restartedMain] com.bohan.MegrezAcademyApplication       : Started MegrezAcademyApplication in 5.819 seconds (JVM running for 6.573)
+2021-01-21 08:43:43.436  INFO 52259 --- [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-21 08:43:43.436  INFO 52259 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-21 08:43:43.443  INFO 52259 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-01-21 08:45:05.687  INFO 52259 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-21 08:45:05.704  INFO 52259 --- [Thread-18] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2021-01-21 16:52:16.594  INFO 53395 --- [restartedMain] com.bohan.MegrezAcademyApplication       : Starting MegrezAcademyApplication on Bohans-Mac-mini.local with PID 53395 (/Users/bohanxiao/Desktop/megrez-academy/target/classes started by bohanxiao in /Users/bohanxiao/Desktop/megrez-academy)
+2021-01-21 16:52:16.597  INFO 53395 --- [restartedMain] com.bohan.MegrezAcademyApplication       : No active profile set, falling back to default profiles: default
+2021-01-21 16:52:16.645  INFO 53395 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-21 16:52:16.646  INFO 53395 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-21 16:52:17.129  INFO 53395 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-21 16:52:17.130  INFO 53395 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-21 16:52:17.148  INFO 53395 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2021-01-21 16:52:17.301  INFO 53395 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4d95282] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-21 16:52:17.423  INFO 53395 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-01-21 16:52:17.434  INFO 53395 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-21 16:52:17.434  INFO 53395 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2021-01-21 16:52:17.470  INFO 53395 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-21 16:52:17.470  INFO 53395 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 824 ms
+2021-01-21 16:52:17.526  INFO 53395 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-01-21 16:52:21.089  INFO 53395 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-01-21 16:52:21.559  INFO 53395 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2021-01-21 16:52:21.707  INFO 53395 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-21 16:52:21.730  INFO 53395 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-21 16:52:21.805  INFO 53395 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2021-01-21 16:52:21.990  INFO 53395 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-01-21 16:52:21.999  INFO 53395 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-01-21 16:52:22.023  INFO 53395 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-01-21 16:52:22.134  INFO 53395 --- [restartedMain] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: queryAllUsingGET_1
+2021-01-21 16:52:22.164  INFO 53395 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-01-21 16:52:22.166  INFO 53395 --- [restartedMain] com.bohan.MegrezAcademyApplication       : Started MegrezAcademyApplication in 5.767 seconds (JVM running for 6.673)
+2021-01-21 16:52:39.540  INFO 53395 --- [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-21 16:52:39.540  INFO 53395 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-21 16:52:39.544  INFO 53395 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2021-01-21 21:55:24.073  INFO 53395 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-21 21:55:24.170  INFO 53395 --- [Thread-20] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bohan.mapper.CourseMapper">
+    <resultMap id="BaseResultMap" type="com.bohan.entity.Course">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="t_id" jdbcType="VARCHAR" property="tId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="session" jdbcType="VARCHAR" property="session"/>
+        <result column="start_time" jdbcType="VARCHAR" property="startTime"/>
+        <result column="end_time" jdbcType="VARCHAR" property="endTime"/>
+        <result column="tuition" jdbcType="VARCHAR" property="tuition"/>
+        <result column="textbook" jdbcType="VARCHAR" property="textbook"/>
+        <result column="prerequisite" jdbcType="VARCHAR" property="prerequisite"/>
+        <result column="des" jdbcType="VARCHAR" property="des"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="semester" jdbcType="VARCHAR" property="semester"/>
+        <result column="number" jdbcType="INTEGER" property="number"/>
+    </resultMap>
+
+    <resultMap id="adminResultMap" type="com.bohan.vo.resp.CoursesAdminQueryRespVO">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="t_id" jdbcType="VARCHAR" property="tId"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="session" jdbcType="VARCHAR" property="session"/>
+        <result column="start_time" jdbcType="VARCHAR" property="startTime"/>
+        <result column="end_time" jdbcType="VARCHAR" property="endTime"/>
+        <result column="tuition" jdbcType="VARCHAR" property="tuition"/>
+        <result column="textbook" jdbcType="VARCHAR" property="textbook"/>
+        <result column="prerequisite" jdbcType="VARCHAR" property="prerequisite"/>
+        <result column="des" jdbcType="VARCHAR" property="des"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="semester" jdbcType="VARCHAR" property="semester"/>
+        <result column="number" jdbcType="INTEGER" property="number"/>
+        <result column="last_name" jdbcType="INTEGER" property="lastName"/>
+        <result column="first_name" jdbcType="INTEGER" property="firstName"/>
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+    id, t_id, `name`, `session`, start_time, end_time, tuition, textbook, prerequisite,
+    des, `status`, semester, `number`
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from course
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from course
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.bohan.entity.Course">
+    insert into course (id, t_id, `name`, 
+      `session`, start_time, end_time, 
+      tuition, textbook, prerequisite,
+      des, `status`, semester, 
+      `number`)
+    values (#{id,jdbcType=VARCHAR}, #{tId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{session,jdbcType=VARCHAR}, #{startTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
+      #{tuition,jdbcType=VARCHAR}, #{textbook,jdbcType=VARCHAR}, #{prerequisite,jdbcType=VARCHAR},
+      #{des,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{semester,jdbcType=VARCHAR}, 
+      #{number,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="com.bohan.entity.Course">
+        insert into course
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="tId != null">
+                t_id,
+            </if>
+            <if test="name != null">
+                `name`,
+            </if>
+            <if test="session != null">
+                `session`,
+            </if>
+            <if test="startTime != null">
+                start_time,
+            </if>
+            <if test="endTime != null">
+                end_time,
+            </if>
+            <if test="tuition != null">
+                tuition,
+            </if>
+            <if test="textbook != null">
+                textbook,
+            </if>
+            <if test="prerequisite != null">
+                prerequisite,
+            </if>
+            <if test="des != null">
+                des,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="semester != null">
+                semester,
+            </if>
+            <if test="number != null">
+                `number`,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="tId != null">
+                #{tId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="session != null">
+                #{session,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                #{startTime,jdbcType=VARCHAR},
+            </if>
+            <if test="endTime != null">
+                #{endTime,jdbcType=VARCHAR},
+            </if>
+            <if test="tuition != null">
+                #{tuition,jdbcType=VARCHAR},
+            </if>
+            <if test="textbook != null">
+                #{textbook,jdbcType=VARCHAR},
+            </if>
+            <if test="prerequisite != null">
+                #{prerequisite,jdbcType=VARCHAR},
+            </if>
+            <if test="des != null">
+                #{des,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="semester != null">
+                #{semester,jdbcType=VARCHAR},
+            </if>
+            <if test="number != null">
+                #{number,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.bohan.entity.Course">
+        update course
+        <set>
+            <if test="tId != null">
+                t_id = #{tId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                `name` = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="session != null">
+                `session` = #{session,jdbcType=VARCHAR},
+            </if>
+            <if test="startTime != null">
+                start_time = #{startTime,jdbcType=VARCHAR},
+            </if>
+            <if test="endTime != null">
+                end_time = #{endTime,jdbcType=VARCHAR},
+            </if>
+            <if test="tuition != null">
+                tuition = #{tuition,jdbcType=VARCHAR},
+            </if>
+            <if test="textbook != null">
+                textbook = #{textbook,jdbcType=VARCHAR},
+            </if>
+            <if test="prerequisite != null">
+                prerequisite = #{prerequisite,jdbcType=VARCHAR},
+            </if>
+            <if test="des != null">
+                des = #{des,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                `status` = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="semester != null">
+                semester = #{semester,jdbcType=VARCHAR},
+            </if>
+            <if test="number != null">
+                `number` = #{number,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.bohan.entity.Course">
+    update course
+    set t_id = #{tId,jdbcType=VARCHAR},
+      `name` = #{name,jdbcType=VARCHAR},
+      `session` = #{session,jdbcType=VARCHAR},
+      start_time = #{startTime,jdbcType=VARCHAR},
+      end_time = #{endTime,jdbcType=VARCHAR},
+      tuition = #{tuition,jdbcType=VARCHAR},
+      textbook = #{textbook,jdbcType=VARCHAR},
+      prerequisite = #{prerequisite,jdbcType=VARCHAR},
+      des = #{des,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=VARCHAR},
+      semester = #{semester,jdbcType=VARCHAR},
+      `number` = #{number,jdbcType=INTEGER}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+
+    <select id="queryAll" resultMap="BaseResultMap" parameterType="com.bohan.vo.req.PageReqVO">
+        select
+        <include refid="Base_Column_List"/>
+        from course
+    </select>
+
+    <select id="queryAllByAdmin" resultMap="adminResultMap">
+        select c.*,p.last_name,p.first_name from course as c left join professor as p on c.t_id = p.id;
+    </select>
+
+    <select id="queryMoreInfoById" resultMap="adminResultMap" parameterType="java.lang.String">
+        select c.*,p.last_name,p.first_name
+        from course as c
+        left join professor as p
+        on c.t_id = p.id
+        where c.id = #{id,jdbcType=VARCHAR};
+    </select>
+
+    <select id="queryCurrentCourse" resultMap="adminResultMap">
+        select *
+        from course
+        where status = '4'
+    </select>
+
+    <update id="startCourseByCourseId" parameterType="java.lang.String">
+        update course
+        set status = '4'
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+
+
+</mapper>
